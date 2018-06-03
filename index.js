@@ -10,13 +10,13 @@ var app = express()
   .get('/', (req, res) => res.render('index'))
   .get('/cool', (req, res) => res.send(cool()))
 
-app.get('/times', (req, res) => {
-  let result = ''
-  const times = process.env.TIMES || 5
-  for (i = 0; i < times; i++) {
-    result += i + ' '
-  }
-  res.send(result)
-})
+// app.get('/times', (req, res) => {
+//   let result = ''
+//   const times = process.env.TIMES || 5
+//   for (i = 0; i < times; i++) {
+//     result += i + ' '
+//   }
+//   res.send(result)
+// })
 
 app.listen(PORT, () => console.log(`Listening on ${ PORT }`))
