@@ -1,7 +1,117 @@
-body {
+/*body {
   padding-top: 50px;
 }
 .starter-template {
   padding: 40px 15px;
   text-align: center;
+}*/
+
+html, body {
+	height: 100%;
 }
+
+body {
+	background-color: #191414;
+	color: #eee;
+	font-family: Helvetica, Arial;
+	font-size: 3vmin;
+}
+
+.hidden {
+	display: none;
+}
+
+.btn--login:active,
+.btn--login:visited,
+.btn--login {
+	background-color: #1db954;
+	border-radius: 2em;
+	color: #ffffff;
+	font-family: Proxima Nova;
+	text-transform: uppercase;
+	transition: transform .2s;
+}
+
+.btn--login:hover {
+	color: #ffffff;
+	transform: scale(1.5);
+}
+
+.btn--login:focus {
+	color: #ffffff;
+	outline:0 !important;
+}
+
+/*.now-playing__name {
+  font-size: 1.5em;
+  margin-bottom: 0.2em;
+}
+
+.now-playing__artist {
+  margin-bottom: 1em;
+}
+
+.now-playing__status {
+  margin-bottom: 1em;
+}
+
+.now-playing__img {
+  float: left;
+  margin-right: 10px;
+  text-align: right;
+  width: 45%;
+}
+
+.now-playing__img img {
+  max-width: 80vmin;
+  width: 100%;
+}
+
+.now-playing__side {
+  margin-left: 5%;
+  width: 45%;
+}
+
+.progress {
+  border: 0.15em solid #eee;
+  height: 1em;
+}
+
+.progress__bar {
+  background-color: #eee;
+  border: 0.1em solid transparent;
+  height: 0.75em;
+}
+
+.background {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-size: initial;
+  background-position: center center;
+  filter: blur(3em) opacity(0.9);
+  position: absolute;
+}
+
+.main-wrapper {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  margin: 0 auto;
+  justify-content: center;
+  position: relative;
+  width: 80%;
+  z-index: 1;
+}*/
+
+.container {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+/*
+.main-container {
+  flex: 1;
+}*/
