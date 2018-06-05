@@ -28,7 +28,33 @@
       </div>
     </div>
 
-    <script src="js/spotify.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+    <script>
+      var socket = io();
+      var loginButton = document.getElementById('js-login-button');
+
+      loginButton.addEventListener('click', function() {
+        socket.emit('login');
+      });
+
+      socket.on('login', function(authUrl) {
+        console.log(authUrl);
+        const width = 450, height = 550, left = screen.width / 2 - width / 2, top = screen.height / 2 - height / 2;
+
+        var loginWindow = window.open(authUrl,"Login with Spotify",
+          "menubar=no,location=no,resizable=no,scrollbar=no,status=no," + 
+          `width=${width},height=${height},left=${left},top=${top}`);
+
+        var getToken = setInterval(function() {
+          if (loginWindow.location.href != authUrl) {
+            this.accessToken = loginWindow.location.href.split("=")[1];
+            clearInterval(getToken);
+            loginWindow.close();
+          }
+        }, 500);
+      });
+    </script>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
